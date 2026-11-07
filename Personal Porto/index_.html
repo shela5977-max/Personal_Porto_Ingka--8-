@@ -1,0 +1,620 @@
+<!doctype html>
+<html class="dark" lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Ingka Jivanda Gayshela | Portofolio</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style_.css" />
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&amp;family=Mrs+Saint+Delafield&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    
+    <!-- Tailwind Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1D8FFF",
+                        charcoal: "#E6EEFA",
+                        accent: "#0B1730",
+                        surface: "#050B1A",
+                        "accent-blue": "#0F2B55",
+                        "accent-purple": "#38BDF8",
+                        "accent-emerald": "#08283A",
+                        "accent-rose": "#081128",
+                        "background-light": "#050B1A",
+                        "card-bg": "#0A1630",
+                        "accent-teal": "#22B8FF",
+                        "accent-pink": "#60A5FA",
+                        slate: { 50: "#0B1730", 100: "#0F1D3D", 200: "#1E3358", 300: "#3A5380", 400: "#6F88B3", 500: "#9DB2D4", 600: "#B8C9E4", 700: "#D3DFF2", 800: "#E6EEFA", 900: "#F1F6FF" },
+                        gray: { 50: "#0B1730", 100: "#0F1D3D", 200: "#1E3358", 300: "#3A5380", 400: "#6F88B3", 500: "#9DB2D4", 600: "#B8C9E4", 700: "#D3DFF2", 800: "#E6EEFA", 900: "#F1F6FF" },
+                        sky: { 50: "#0C2244", 100: "#0F2B55", 200: "#14407A", 300: "#38BDF8", 400: "#38BDF8", 500: "#1D8FFF", 600: "#1D8FFF", 700: "#7DD3FC" },
+                        blue: { 50: "#0C1F4A", 100: "#102A5E", 500: "#3B82F6", 600: "#3B82F6", 700: "#93C5FD" },
+                        cyan: { 50: "#08283A", 100: "#0A3550", 500: "#22D3EE", 600: "#22D3EE", 700: "#67E8F9" },
+                    },
+                    fontFamily: { display: ["Inter", "sans-serif"] },
+                    borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+                    boxShadow: {
+                        "soft-card": "0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 10px -2px rgba(0, 0, 0, 0.03)",
+                        "hover-card": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+                        soft: "0 10px 25px -5px rgba(0, 0, 0, 0.04), 0 8px 10px -6px rgba(0, 0, 0, 0.04)",
+                        "soft-hover": "0 20px 40px -12px rgba(0, 0, 0, 0.08)",
+                    },
+                    animation: {
+                        float: "float 6s ease-in-out infinite",
+                        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+                        "slide-up": "slide-up 0.5s ease-out",
+                        "fade-in": "fade-in 0.7s ease-out",
+                        "slide-down": "slide-down 0.3s ease-out",
+                    },
+                    keyframes: {
+                        float: { "0%, 100%": { transform: "translateY(0)" }, "50%": { transform: "translateY(-20px)" } },
+                        "pulse-glow": { "0%, 100%": { opacity: 1 }, "50%": { opacity: 0.7 } },
+                        "slide-up": { "0%": { transform: "translateY(20px)", opacity: 0 }, "100%": { transform: "translateY(0)", opacity: 1 } },
+                        "slide-down": { "0%": { transform: "translateY(-20px)", opacity: 0 }, "100%": { transform: "translateY(0)", opacity: 1 } },
+                        "fade-in": { "0%": { opacity: 0 }, "100%": { opacity: 1 } },
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="bg-surface font-display text-slate-900 selection:bg-primary/20">
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Navigation (menu samping) -->
+    <nav class="side-nav" id="navbar" aria-label="Menu utama">
+        <a class="nav-link side-link" href="#home" data-scroll-to aria-label="Beranda"><span class="material-symbols-outlined">home</span><span class="side-tip">Beranda</span></a>
+        <a class="nav-link side-link" href="#about" data-scroll-to aria-label="Tentang"><span class="material-symbols-outlined">person</span><span class="side-tip">Tentang</span></a>
+        <a class="nav-link side-link" href="#projects" data-scroll-to aria-label="Project"><span class="material-symbols-outlined">work</span><span class="side-tip">Project</span></a>
+        <a class="nav-link side-link" href="#skills" data-scroll-to aria-label="Keahlian"><span class="material-symbols-outlined">code</span><span class="side-tip">Keahlian</span></a>
+        <a class="nav-link side-link" href="#experience" data-scroll-to aria-label="Pengalaman"><span class="material-symbols-outlined">school</span><span class="side-tip">Pengalaman</span></a>
+        <a class="nav-link side-link" href="#contact" data-scroll-to aria-label="Kontak"><span class="material-symbols-outlined">mail</span><span class="side-tip">Kontak</span></a>
+    </nav>
+
+    <!-- MAIN CONTENT - dengan data-scroll-container untuk Locomotive Scroll -->
+    <main data-scroll-container>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center pt-24 lg:pt-28 hero-pattern overflow-hidden" id="home" data-scroll-section>
+            <div class="absolute top-40 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float"></div>
+            <div class="absolute bottom-20 right-1/3 w-96 h-96 bg-sky-300/20 rounded-full blur-3xl animate-float" style="animation-delay: 2s"></div>
+            <div class="portfolio-heading absolute top-14 left-0 right-0 z-10 pointer-events-none">
+                <h2 class="portfolio-title">Portofolio</h2>
+                <span class="portfolio-sub">Ingka Jivanda</span>
+            </div>
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+                <div class="space-y-8 animate-fade-in">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/10 text-primary text-xs font-bold uppercase tracking-wider hover-lift">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                        </span>
+                        Frontend Developer
+                    </div>
+                    <div class="space-y-4">
+                        <h1 class="text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight text-slate-900">
+                            Halo, saya <span class="text-primary typing-cursor" id="typing-text">Ingka Jivanda Gayshela</span>
+                        </h1>
+                        <p class="text-xl lg:text-2xl text-slate-500 font-medium max-w-lg leading-relaxed">
+                            Mahasiswa Teknik Informatika &amp; <span class="text-slate-900 underline decoration-primary/30 decoration-4 underline-offset-4">Frontend Developer</span>
+                            yang merancang dan membangun tampilan aplikasi dan website yang interaktif dan nyaman digunakan.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <button class="bg-primary hover:bg-[#0B6FD6] text-white px-8 py-4 rounded-2xl font-bold text-lg flex items-center gap-2 transition-all hover:translate-y-[-2px] shadow-xl shadow-primary/20 hover:shadow-2xl hover:scale-105 view-work-btn">
+                            Lihat Karya Saya <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                        <button class="bg-transparent border border-sky-400/40 hover:bg-sky-400/10 text-slate-900 px-8 py-4 rounded-2xl font-bold text-lg flex items-center gap-2 transition-all hover:translate-y-[-2px] shadow-sm hover:shadow-lg hover:scale-105" id="download-cv">
+                            Unduh CV <span class="material-symbols-outlined">download</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="relative animate-slide-up flex justify-center" style="animation-delay: 0.3s">
+                    <div class="relative w-[290px] h-[290px] lg:w-[360px] lg:h-[360px]">
+                        <!-- cahaya latar -->
+                        <div class="absolute -inset-8 rounded-full" style="background: radial-gradient(circle, rgba(0,180,255,0.32) 0%, transparent 68%)"></div>
+                        <div class="absolute inset-0 rounded-full border border-sky-400/20" style="background: radial-gradient(circle at 50% 40%, #0B3556 0%, #06182E 75%)"></div>
+                        <!-- bentuk blob neon -->
+                        <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 400" fill="none" aria-hidden="true" style="filter: drop-shadow(0 0 14px rgba(0,190,255,0.7))">
+                            <defs>
+                                <linearGradient id="blobGrad" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0" stop-color="#00C8FF" />
+                                    <stop offset="1" stop-color="#0057FF" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M150 38 C245 14 345 70 352 170 C358 262 290 352 195 358 C105 363 52 300 48 215 C44 130 78 58 150 38 Z" fill="url(#blobGrad)" opacity="0.95" />
+                            <path d="M178 22 C290 18 382 105 372 215 C362 318 262 392 160 366" stroke="#E6F7FF" stroke-width="2.5" stroke-linecap="round" />
+                        </svg>
+                        <!-- foto: kepala boleh keluar dari lingkaran, bagian bawah dipotong melengkung -->
+                        <div class="absolute inset-0" style="clip-path: inset(-30% -8% 0 -8% round 0 0 50% 50%)">
+                            <img class="absolute" style="left: 11%; width: 78%; top: -12%; height: auto; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 7%, #000 93%, transparent 100%); mask-image: linear-gradient(to right, transparent 0, #000 7%, #000 93%, transparent 100%)" src="assets/foto-ingka.webp" alt="Foto Ingka Jivanda Gayshela" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="bg-background-light py-20" id="about" data-scroll-section>
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-16 animate-slide-up">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-widest">
+                            <span class="w-8 h-[2px] bg-primary"></span>Perkenalan
+                        </div>
+                        <h1 class="text-charcoal text-5xl md:text-6xl font-black leading-tight tracking-[-0.033em]">
+                            Tentang Saya &amp; <span class="text-primary">Keahlian</span></h1>
+                        <p class="text-gray-500 text-xl max-w-2xl font-normal leading-relaxed">Mahasiswa Teknik Informatika yang berfokus pada pengembangan antarmuka web dan aplikasi (frontend).</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-24">
+                    <div class="lg:col-span-7 flex flex-col gap-6 animate-fade-in">
+                        <h2 class="text-charcoal text-3xl font-bold">Siapa Saya</h2>
+                        <div class="space-y-4 text-gray-600 text-lg leading-relaxed">
+                            <p>Saya mahasiswa semester 3 Program Studi <span class="text-primary font-semibold">Teknik Informatika</span> di Politeknik Negeri Jember dengan fokus pada pengembangan antarmuka web dan aplikasi (frontend). Saya memiliki pengalaman mengerjakan proyek dalam merancang dan membangun tampilan aplikasi dan website, serta kemampuan mendesain menggunakan <span class="text-primary font-semibold">Figma</span> dan <span class="text-primary font-semibold">Canva</span>.</p>
+                            <p>Berlatar belakang SMK Manajemen Perkantoran dan Layanan Bisnis, saya terbiasa bekerja dengan teliti, tertib administrasi, dan rapi dalam pendokumentasian.</p>
+                            <p>Saya aktif dalam organisasi kemahasiswaan, komunikatif, dapat bekerja sama dalam tim, mampu mengatur waktu dengan baik, dan memiliki motivasi tinggi untuk terus mempelajari teknologi baru serta menerapkannya di lingkungan profesional.</p>
+                        </div>
+                        <div class="mt-4 p-6 rounded-xl bg-primary/5 border border-primary/10 flex items-center gap-4 hover-lift">
+                            <span class="material-symbols-outlined text-primary scale-125">groups</span>
+                            <p class="text-sm font-medium text-primary">Aktif sebagai anggota Divisi Advokesma, Informatics Community</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 flex flex-col gap-4 animate-slide-up" style="animation-delay: 0.2s">
+                        <h2 class="text-charcoal text-xl font-bold mb-2">Info Singkat</h2>
+                        <div class="quick-fact-card p-6 rounded-xl flex flex-col gap-2 hover-lift">
+                            <div class="flex items-center gap-3"><span class="material-symbols-outlined text-sky-500">school</span>
+                                <p class="text-gray-400 text-xs uppercase font-bold tracking-widest">Pendidikan</p>
+                            </div>
+                            <p class="text-charcoal font-medium text-lg">Teknik Informatika - Politeknik Negeri Jember</p>
+                        </div>
+                        <div class="quick-fact-card p-6 rounded-xl flex flex-col gap-2 hover-lift">
+                            <div class="flex items-center gap-3"><span class="material-symbols-outlined text-blue-500">grade</span>
+                                <p class="text-gray-400 text-xs uppercase font-bold tracking-widest">IPK</p>
+                            </div>
+                            <p class="text-charcoal font-medium text-lg">3.85 / 4.00 (rata-rata semester 1–2)</p>
+                        </div>
+                        <div class="quick-fact-card p-6 rounded-xl flex flex-col gap-2 hover-lift">
+                            <div class="flex items-center gap-3"><span class="material-symbols-outlined text-cyan-500">psychology</span>
+                                <p class="text-gray-400 text-xs uppercase font-bold tracking-widest">Kekuatan Utama</p>
+                            </div>
+                            <p class="text-charcoal font-medium text-lg">Kerja Sama Tim · Komunikasi · Manajemen Waktu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="bg-[#081128] py-20" id="projects" data-scroll-section>
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-14 text-center md:text-left animate-fade-in">
+                    <span class="inline-block px-3 py-1 bg-accent-blue text-primary text-xs font-bold uppercase tracking-widest rounded-full mb-4">Karya Saya</span>
+                    <h1 class="text-4xl md:text-5xl font-black tracking-tight text-slate-900 mb-6">Project Unggulan</h1>
+                    <p class="text-slate-500 text-lg md:text-xl max-w-2xl leading-relaxed">Project yang saya kerjakan sebagai frontend developer, dengan fokus pada tampilan yang interaktif, konsisten, dan mudah digunakan.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <!-- Dapur Bu Mon -->
+                    <div class="card-3d-container horizon-gradient animate-slide-up group">
+                        <div class="card-3d shadow-soft hover:shadow-soft-hover transition-all duration-500">
+                            <div class="card-3d-shadow"></div>
+                            <div class="card-3d-layer"></div>
+                            <div class="card-3d-layer"></div>
+                            <div class="card-3d-content p-8 flex flex-col h-full">
+                                <div class="project-image-3d aspect-[4/5] w-full mb-6 bg-gradient-to-br from-[#E0F2FE] via-white to-[#BAE6FD]">
+                                    <img src="assets/dapur-bu-mon.webp" alt="Banner project Dapur Bu Mon" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-700 group-hover:scale-105" />
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-start mb-4 gap-3">
+                                        <h3 class="text-2xl font-bold text-slate-900">Dapur Bu Mon</h3>
+                                        <div class="flex gap-2 shrink-0"><div class="tag-pill bg-sky-100 text-sky-700">Frontend</div><div class="tag-pill bg-cyan-100 text-cyan-700">Website</div></div>
+                                    </div>
+                                    <p class="text-slate-500 text-sm mb-6 leading-relaxed">Website catering dengan fitur transaksi online, pilihan menu lengkap, dan dashboard admin. Saya mengembangkan sisi frontend, mulai dari penyusunan struktur halaman hingga tampilan akhir.</p>
+                                </div>
+                                <div class="flex gap-4 mt-auto pt-4 z-10 relative"><a href="https://pameran-jti.polije.ac.id/product/414/catering-dapur-bu-mon" target="_blank" rel="noopener" class="flex-[2] flex items-center justify-center gap-2 bg-primary text-white py-3 px-4 rounded-xl text-sm font-bold transition-all duration-300 hover:bg-primary/80 hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-1 demo-button"><span class="material-symbols-outlined !text-[18px]">open_in_new</span><span>Lihat Project</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Exotic Gaming and Cafe -->
+                    <div class="card-3d-container etherflow-gradient animate-slide-up group" style="animation-delay: 0.1s">
+                        <div class="card-3d shadow-soft hover:shadow-soft-hover transition-all duration-500">
+                            <div class="card-3d-shadow"></div>
+                            <div class="card-3d-layer"></div>
+                            <div class="card-3d-layer"></div>
+                            <div class="card-3d-content p-8 flex flex-col h-full">
+                                <div class="project-image-3d aspect-[4/5] w-full mb-6 bg-gradient-to-br from-[#E0F2FE] via-white to-[#BAE6FD]">
+                                    <img src="assets/exotic-gaming-cafe.webp" alt="Banner project Exotic Gaming and Cafe" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-700 group-hover:scale-105" />
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-start mb-4 gap-3">
+                                        <h3 class="text-2xl font-bold text-slate-900">Exotic Gaming and Cafe</h3>
+                                        <div class="flex gap-2 shrink-0"><div class="tag-pill bg-sky-100 text-sky-700">Frontend</div><div class="tag-pill bg-blue-100 text-blue-700">Aplikasi</div></div>
+                                    </div>
+                                    <p class="text-slate-500 text-sm mb-6 leading-relaxed">Sistem digital operasional cafe dengan absensi scan wajah, kasir digital, dan dashboard owner. Saya merancang dan membangun tampilan antarmuka (frontend) sesuai kebutuhan pengguna.</p>
+                                </div>
+                                <div class="flex gap-4 mt-auto pt-4 z-10 relative"><a href="https://pameran-jti.polije.ac.id/product/642/exotic-gaming-and-cafe" target="_blank" rel="noopener" class="flex-[2] flex items-center justify-center gap-2 bg-primary text-white py-3 px-4 rounded-xl text-sm font-bold transition-all duration-300 hover:bg-primary/80 hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-1 demo-button"><span class="material-symbols-outlined !text-[18px]">open_in_new</span><span>Lihat Project</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="bg-background-light py-20" id="skills" data-scroll-section>
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="space-y-12">
+                    <div class="text-center md:text-left animate-fade-in">
+                        <h2 class="text-charcoal text-4xl font-bold section-title">Keahlian</h2>
+                        <div class="h-1.5 w-16 bg-primary rounded-full mt-4 mb-6"></div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="space-y-6 animate-slide-up">
+                            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">terminal</span>
+                                <h3 class="text-xl font-bold text-charcoal">Frontend</h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="skill-card p-5 rounded-xl flex flex-col items-center justify-center gap-3 text-center group hover-lift">
+                                    <div class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600 group-hover:bg-sky-600 group-hover:text-white transition-all">
+                                        <span class="material-symbols-outlined">html</span>
+                                    </div><span class="text-sm font-bold text-charcoal">HTML</span>
+                                </div>
+                                <div class="skill-card p-5 rounded-xl flex flex-col items-center justify-center gap-3 text-center group hover-lift">
+                                    <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                        <span class="material-symbols-outlined">css</span>
+                                    </div><span class="text-sm font-bold text-charcoal">CSS</span>
+                                </div>
+                                <div class="skill-card p-5 rounded-xl flex flex-col items-center justify-center gap-3 text-center group hover-lift">
+                                    <div class="w-12 h-12 rounded-xl bg-cyan-50 flex items-center justify-center text-cyan-600 group-hover:bg-cyan-600 group-hover:text-white transition-all">
+                                        <span class="material-symbols-outlined">javascript</span>
+                                    </div><span class="text-sm font-bold text-charcoal">JavaScript</span>
+                                </div>
+                                <div class="skill-card p-5 rounded-xl flex flex-col items-center justify-center gap-3 text-center group hover-lift">
+                                    <div class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600 group-hover:bg-sky-600 group-hover:text-white transition-all">
+                                        <span class="material-symbols-outlined">format_paint</span>
+                                    </div><span class="text-sm font-bold text-charcoal">Tailwind CSS</span>
+                                </div>
+                                <div class="skill-card p-5 rounded-xl flex flex-col items-center justify-center gap-3 text-center group hover-lift">
+                                    <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                        <span class="material-symbols-outlined">flutter_dash</span>
+                                    </div><span class="text-sm font-bold text-charcoal">Flutter</span>
+                                </div>
+                                <div class="skill-card p-5 rounded-xl flex flex-col items-center justify-center gap-3 text-center group hover-lift">
+                                    <div class="w-12 h-12 rounded-xl bg-cyan-50 flex items-center justify-center text-cyan-600 group-hover:bg-cyan-600 group-hover:text-white transition-all">
+                                        <span class="material-symbols-outlined">web</span>
+                                    </div><span class="text-sm font-bold text-charcoal">UI Design</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-6 animate-slide-up" style="animation-delay: 0.1s">
+                            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">handyman</span>
+                                <h3 class="text-xl font-bold text-charcoal">Desain &amp; Tools</h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="skill-card p-5 rounded-xl flex flex-col items-center justify-center gap-3 text-center group hover-lift">
+                                    <div class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600 group-hover:bg-sky-600 group-hover:text-white transition-all">
+                                        <span class="material-symbols-outlined">draw</span>
+                                    </div><span class="text-sm font-bold text-charcoal">Figma</span>
+                                </div>
+                                <div class="skill-card p-5 rounded-xl flex flex-col items-center justify-center gap-3 text-center group hover-lift">
+                                    <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                        <span class="material-symbols-outlined">palette</span>
+                                    </div><span class="text-sm font-bold text-charcoal">Canva</span>
+                                </div>
+                                <div class="skill-card p-5 rounded-xl flex flex-col items-center justify-center gap-3 text-center group hover-lift">
+                                    <div class="w-12 h-12 rounded-xl bg-cyan-50 flex items-center justify-center text-cyan-600 group-hover:bg-cyan-600 group-hover:text-white transition-all">
+                                        <span class="material-symbols-outlined">videocam</span>
+                                    </div><span class="text-sm font-bold text-charcoal">CapCut</span>
+                                </div>
+                                <div class="skill-card p-5 rounded-xl flex flex-col items-center justify-center gap-3 text-center group hover-lift">
+                                    <div class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600 group-hover:bg-sky-600 group-hover:text-white transition-all">
+                                        <span class="material-symbols-outlined">code</span>
+                                    </div><span class="text-sm font-bold text-charcoal">VS Code</span>
+                                </div>
+                                <div class="skill-card p-5 rounded-xl flex flex-col items-center justify-center gap-3 text-center group hover-lift">
+                                    <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                        <span class="material-symbols-outlined">description</span>
+                                    </div><span class="text-sm font-bold text-charcoal">Microsoft Office</span>
+                                </div>
+                                <div class="skill-card p-5 rounded-xl flex flex-col items-center justify-center gap-3 text-center group hover-lift">
+                                    <div class="w-12 h-12 rounded-xl bg-cyan-50 flex items-center justify-center text-cyan-600 group-hover:bg-cyan-600 group-hover:text-white transition-all">
+                                        <span class="material-symbols-outlined">folder_open</span>
+                                    </div><span class="text-sm font-bold text-charcoal">Dokumentasi</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-6 animate-slide-up" style="animation-delay: 0.2s">
+                            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">diversity_3</span>
+                                <h3 class="text-xl font-bold text-charcoal">Soft Skills</h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="skill-card p-5 rounded-xl flex flex-col items-center justify-center gap-3 text-center group hover-lift">
+                                    <div class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600 group-hover:bg-sky-600 group-hover:text-white transition-all">
+                                        <span class="material-symbols-outlined">groups</span>
+                                    </div><span class="text-sm font-bold text-charcoal">Kerja Sama Tim</span>
+                                </div>
+                                <div class="skill-card p-5 rounded-xl flex flex-col items-center justify-center gap-3 text-center group hover-lift">
+                                    <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                        <span class="material-symbols-outlined">forum</span>
+                                    </div><span class="text-sm font-bold text-charcoal">Komunikasi</span>
+                                </div>
+                                <div class="skill-card p-5 rounded-xl flex flex-col items-center justify-center gap-3 text-center group hover-lift">
+                                    <div class="w-12 h-12 rounded-xl bg-cyan-50 flex items-center justify-center text-cyan-600 group-hover:bg-cyan-600 group-hover:text-white transition-all">
+                                        <span class="material-symbols-outlined">schedule</span>
+                                    </div><span class="text-sm font-bold text-charcoal">Manajemen Waktu</span>
+                                </div>
+                                <div class="skill-card p-5 rounded-xl flex flex-col items-center justify-center gap-3 text-center group hover-lift">
+                                    <div class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600 group-hover:bg-sky-600 group-hover:text-white transition-all">
+                                        <span class="material-symbols-outlined">school</span>
+                                    </div><span class="text-sm font-bold text-charcoal">Kemauan Belajar</span>
+                                </div>
+                                <div class="skill-card p-5 rounded-xl flex flex-col items-center justify-center gap-3 text-center group hover-lift">
+                                    <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                        <span class="material-symbols-outlined">fact_check</span>
+                                    </div><span class="text-sm font-bold text-charcoal">Teliti</span>
+                                </div>
+                                <div class="skill-card p-5 rounded-xl flex flex-col items-center justify-center gap-3 text-center group hover-lift">
+                                    <div class="w-12 h-12 rounded-xl bg-cyan-50 flex items-center justify-center text-cyan-600 group-hover:bg-cyan-600 group-hover:text-white transition-all">
+                                        <span class="material-symbols-outlined">translate</span>
+                                    </div><span class="text-sm font-bold text-charcoal">Kemauan Belajar Bahasa Baru</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="bg-[#081128] py-20" id="experience" data-scroll-section>
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-16 animate-slide-up">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-widest">
+                            <span class="w-8 h-[2px] bg-primary"></span>Perjalanan Saya
+                        </div>
+                        <h1 class="text-charcoal text-5xl md:text-6xl font-black leading-tight tracking-[-0.033em]">
+                            Pengalaman &amp; <span class="text-primary">Pendidikan</span></h1>
+                        <p class="text-gray-500 text-xl max-w-2xl font-normal leading-relaxed">Perjalanan saya di bidang teknologi, organisasi, dan pendidikan.</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-[48px_1fr] gap-x-6 px-4">
+                    <div class="flex flex-col items-center">
+                        <div class="size-11 rounded-full bg-primary/10 backdrop-blur-sm flex items-center justify-center text-primary border-4 border-white shadow-sm z-10">
+                            <span class="material-symbols-outlined text-xl">storefront</span>
+                        </div>
+                        <div class="w-[2px] timeline-line h-full grow"></div>
+                    </div>
+                    <div class="flex flex-1 flex-col pb-12">
+                        <div class="light-card p-7 rounded-2xl hover:border-primary transition-all duration-300 group hover-lift">
+                            <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
+                                <h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">
+                                    Software Engineer (Frontend)</h3><span class="px-4 py-1.5 rounded-full bg-primary/5 text-primary text-[11px] font-bold uppercase tracking-wider border border-primary/10">Jan 2026 – Apr 2026</span>
+                            </div>
+                            <p class="text-slate-500 text-base font-semibold mb-3">Exotic Gaming and Cafe</p>
+                            <ul class="space-y-3 text-slate-600 text-[15px] leading-relaxed"><li class="flex gap-3"><span class="text-primary mt-1.5 block size-1.5 rounded-full bg-primary shrink-0"></span>Merancang dan membangun tampilan antarmuka (frontend) aplikasi sesuai kebutuhan pengguna.</li><li class="flex gap-3"><span class="text-primary mt-1.5 block size-1.5 rounded-full bg-primary shrink-0"></span>Menerjemahkan rancangan desain menjadi halaman yang interaktif, konsisten, dan nyaman digunakan.</li><li class="flex gap-3"><span class="text-primary mt-1.5 block size-1.5 rounded-full bg-primary shrink-0"></span>Berkoordinasi dengan anggota tim dalam pembagian tugas, diskusi, dan penyelesaian target proyek.</li><li class="flex gap-3"><span class="text-primary mt-1.5 block size-1.5 rounded-full bg-primary shrink-0"></span>Menguji tampilan dan fungsi aplikasi serta memperbaiki kendala agar berjalan dengan baik.</li></ul>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="size-11 rounded-full bg-accent-teal/10 backdrop-blur-sm flex items-center justify-center text-accent-teal border-4 border-white shadow-sm z-10">
+                            <span class="material-symbols-outlined text-xl">restaurant</span>
+                        </div>
+                        <div class="w-[2px] timeline-line h-full grow"></div>
+                    </div>
+                    <div class="flex flex-1 flex-col pb-12">
+                        <div class="light-card p-7 rounded-2xl hover:border-accent-teal transition-all duration-300 group hover-lift">
+                            <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
+                                <h3 class="text-xl font-bold text-slate-900 group-hover:text-accent-teal transition-colors">
+                                    Software Engineer (Frontend)</h3><span class="px-4 py-1.5 rounded-full bg-accent-teal/5 text-accent-teal text-[11px] font-bold uppercase tracking-wider border border-accent-teal/10">Sep 2025 – Des 2025</span>
+                            </div>
+                            <p class="text-slate-500 text-base font-semibold mb-3">Dapur Bu Mon</p>
+                            <ul class="space-y-3 text-slate-600 text-[15px] leading-relaxed"><li class="flex gap-3"><span class="text-primary mt-1.5 block size-1.5 rounded-full bg-primary shrink-0"></span>Mengembangkan sisi frontend website, mulai dari penyusunan struktur halaman hingga tampilan akhir.</li><li class="flex gap-3"><span class="text-primary mt-1.5 block size-1.5 rounded-full bg-primary shrink-0"></span>Mengimplementasikan fitur dan komponen tampilan yang mendukung kebutuhan penggunaan website.</li><li class="flex gap-3"><span class="text-primary mt-1.5 block size-1.5 rounded-full bg-primary shrink-0"></span>Bekerja sama dengan tim dalam diskusi, evaluasi, dan penyelesaian kendala selama proyek berlangsung.</li><li class="flex gap-3"><span class="text-primary mt-1.5 block size-1.5 rounded-full bg-primary shrink-0"></span>Melakukan pengecekan dan perbaikan tampilan agar website berfungsi dengan baik dan mudah digunakan.</li></ul>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="size-11 rounded-full bg-accent-purple/10 backdrop-blur-sm flex items-center justify-center text-accent-purple border-4 border-white shadow-sm z-10">
+                            <span class="material-symbols-outlined text-xl">groups</span>
+                        </div>
+                        <div class="w-[2px] timeline-line h-full grow"></div>
+                    </div>
+                    <div class="flex flex-1 flex-col pb-12">
+                        <div class="light-card p-7 rounded-2xl hover:border-accent-purple transition-all duration-300 group hover-lift">
+                            <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
+                                <h3 class="text-xl font-bold text-slate-900 group-hover:text-accent-purple transition-colors">
+                                    Anggota Divisi Advokesma</h3><span class="px-4 py-1.5 rounded-full bg-accent-purple/5 text-accent-purple text-[11px] font-bold uppercase tracking-wider border border-accent-purple/10">Des 2025 – Sekarang</span>
+                            </div>
+                            <p class="text-slate-500 text-base font-semibold mb-3">Informatics Community</p>
+                            <ul class="space-y-3 text-slate-600 text-[15px] leading-relaxed"><li class="flex gap-3"><span class="text-primary mt-1.5 block size-1.5 rounded-full bg-primary shrink-0"></span>Mengikuti dan mendukung pelaksanaan program kerja kemahasiswaan Divisi Advokesma.</li><li class="flex gap-3"><span class="text-primary mt-1.5 block size-1.5 rounded-full bg-primary shrink-0"></span>Terlibat dalam persiapan dan pelaksanaan kegiatan sesuai tugas divisi.</li><li class="flex gap-3"><span class="text-primary mt-1.5 block size-1.5 rounded-full bg-primary shrink-0"></span>Berkoordinasi dengan anggota dan pengurus lain agar kegiatan berjalan lancar.</li></ul>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="size-11 rounded-full bg-accent-pink/10 backdrop-blur-sm flex items-center justify-center text-accent-pink border-4 border-white shadow-sm z-10">
+                            <span class="material-symbols-outlined text-xl">workspace_premium</span>
+                        </div>
+                        <div class="w-[2px] timeline-line h-full grow"></div>
+                    </div>
+                    <div class="flex flex-1 flex-col pb-12">
+                        <div class="light-card p-7 rounded-2xl hover:border-accent-pink transition-all duration-300 group hover-lift">
+                            <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
+                                <h3 class="text-xl font-bold text-slate-900 group-hover:text-accent-pink transition-colors">
+                                    LKMM Pra-TD</h3><span class="px-4 py-1.5 rounded-full bg-accent-pink/5 text-accent-pink text-[11px] font-bold uppercase tracking-wider border border-accent-pink/10">Okt 2025</span>
+                            </div>
+                            <p class="text-slate-500 text-base font-semibold mb-3">Latihan Keterampilan Manajemen Mahasiswa Pra Tingkat Dasar</p>
+                            <p class="text-slate-600 text-[15px] leading-relaxed">Mengikuti pelatihan dasar manajemen dan kepemimpinan mahasiswa.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="size-11 rounded-full bg-accent-teal/10 backdrop-blur-sm flex items-center justify-center text-accent-teal border-4 border-white shadow-sm z-10">
+                            <span class="material-symbols-outlined text-xl">translate</span>
+                        </div>
+                        <div class="w-[2px] timeline-line h-full grow"></div>
+                    </div>
+                    <div class="flex flex-1 flex-col pb-12">
+                        <div class="light-card p-7 rounded-2xl hover:border-accent-teal transition-all duration-300 group hover-lift">
+                            <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
+                                <h3 class="text-xl font-bold text-slate-900 group-hover:text-accent-teal transition-colors">
+                                    EPT (English Proficiency Test)</h3><span class="px-4 py-1.5 rounded-full bg-accent-teal/5 text-accent-teal text-[11px] font-bold uppercase tracking-wider border border-accent-teal/10">Mei</span>
+                            </div>
+                            <p class="text-slate-500 text-base font-semibold mb-3">Tes Kemampuan Bahasa Inggris</p>
+                            <p class="text-slate-600 text-[15px] leading-relaxed">Skor: 37/140</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="size-11 rounded-full bg-primary/10 backdrop-blur-sm flex items-center justify-center text-primary border-4 border-white shadow-sm z-10">
+                            <span class="material-symbols-outlined text-xl">school</span>
+                        </div>
+                        <div class="w-[2px] timeline-line h-full grow"></div>
+                    </div>
+                    <div class="flex flex-1 flex-col pb-12">
+                        <div class="light-card p-7 rounded-2xl hover:border-primary transition-all duration-300 group hover-lift">
+                            <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
+                                <h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">
+                                    Teknik Informatika</h3><span class="px-4 py-1.5 rounded-full bg-primary/5 text-primary text-[11px] font-bold uppercase tracking-wider border border-primary/10">2025 – Sekarang</span>
+                            </div>
+                            <p class="text-slate-500 text-base font-semibold mb-3">Politeknik Negeri Jember</p>
+                            <p class="text-slate-600 text-[15px] leading-relaxed">IPK rata-rata semester 1–2: 3.85/4.00. Mata kuliah relevan: Logika dan Algoritma, Konsep Basis Data, Struktur Data, Analisis Desain Terstruktur, Konsep Jaringan Komputer, Interaksi Manusia dan Komputer, Software Quality Assurance, Workshop Manajemen Proyek, Workshop Sistem Informasi Web Client, dan Workshop Sistem Informasi Web Server.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="size-11 rounded-full bg-accent-teal/10 backdrop-blur-sm flex items-center justify-center text-accent-teal border-4 border-white shadow-sm z-10">
+                            <span class="material-symbols-outlined text-xl">menu_book</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-1 flex-col">
+                        <div class="light-card p-7 rounded-2xl hover:border-accent-teal transition-all duration-300 group hover-lift">
+                            <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
+                                <h3 class="text-xl font-bold text-slate-900 group-hover:text-accent-teal transition-colors">
+                                    Manajemen Perkantoran dan Layanan Bisnis</h3><span class="px-4 py-1.5 rounded-full bg-accent-teal/5 text-accent-teal text-[11px] font-bold uppercase tracking-wider border border-accent-teal/10">2022 – 2025</span>
+                            </div>
+                            <p class="text-slate-500 text-base font-semibold mb-3">SMK Negeri 2 Nganjuk</p>
+                            <p class="text-slate-600 text-[15px] leading-relaxed">Mata pelajaran utama: Kearsipan, Keuangan, Informatika, Ekonomi Bisnis, Pengelolaan SDM, dan Akuntansi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="bg-background-light py-20" id="contact" data-scroll-section>
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-16 animate-slide-up">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-widest">
+                            <span class="w-8 h-[2px] bg-primary"></span>Hubungi Saya
+                        </div>
+                        <h1 class="text-charcoal text-5xl md:text-6xl font-black leading-tight tracking-[-0.033em]">
+                            Mari berkolaborasi <span class="text-primary">bersama</span></h1>
+                        <p class="text-gray-500 text-xl max-w-2xl font-normal leading-relaxed">Punya project atau ingin berdiskusi tentang teknologi? Silakan hubungi saya, saya selalu terbuka untuk kesempatan baru.</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <div class="animate-fade-in">
+                        <form class="flex flex-col gap-6" id="contact-form">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="flex flex-col">
+                                    <label class="text-sm font-bold text-slate-700 pb-2 px-1">Nama Lengkap</label>
+                                    <input id="name" name="name" class="w-full rounded-xl border border-slate-200 bg-slate-50/50 focus:ring-4 focus:ring-primary/10 focus:border-primary h-14 px-5 text-slate-800 transition-all placeholder:text-slate-400 hover:border-primary/50" placeholder="Nama Anda" type="text" required />
+                                </div>
+                                <div class="flex flex-col">
+                                    <label class="text-sm font-bold text-slate-700 pb-2 px-1">Alamat Email</label>
+                                    <input id="email" name="email" class="w-full rounded-xl border border-slate-200 bg-slate-50/50 focus:ring-4 focus:ring-primary/10 focus:border-primary h-14 px-5 text-slate-800 transition-all placeholder:text-slate-400 hover:border-primary/50" placeholder="halo@contoh.com" type="email" required />
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="text-sm font-bold text-slate-700 pb-2 px-1">Pesan</label>
+                                <textarea id="message" name="message" class="w-full rounded-xl border border-slate-200 bg-slate-50/50 focus:ring-4 focus:ring-primary/10 focus:border-primary p-5 text-slate-800 transition-all resize-none placeholder:text-slate-400 hover:border-primary/50 min-h-[180px]" placeholder="Ceritakan tentang project Anda atau sekadar menyapa..." required></textarea>
+                            </div>
+                            <button type="submit" id="send-btn" class="bg-primary hover:bg-[#0B6FD6] text-white font-bold py-4 px-10 rounded-xl transition-all shadow-xl shadow-primary/20 hover:shadow-2xl flex items-center justify-center gap-3 w-full group mt-4 hover:scale-[1.02]">
+                                Kirim Pesan
+                                <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">send</span>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="flex flex-col gap-10 animate-slide-up" style="animation-delay: 0.2s">
+                        <div class="flex flex-col gap-6">
+                            <h3 class="text-xl font-bold text-slate-900 flex items-center gap-2"><span class="material-symbols-outlined text-primary">contacts</span>Terhubung dengan saya</h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <a class="flex items-center gap-4 p-4 light-card rounded-xl hover:border-[#0A66C2] transition-all group hover-lift" href="https://www.linkedin.com/in/ingka-jivanda-gayshela-1b6137392" target="_blank" rel="noopener">
+                                    <div class="size-12 rounded-xl bg-[#0A66C2]/10 flex items-center justify-center text-[#0A66C2] group-hover:bg-[#0A66C2] group-hover:text-white transition-all">
+                                        <span class="material-symbols-outlined">share</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-sm text-slate-900">LinkedIn</p>
+                                        <p class="text-xs text-slate-500 font-medium">Profil profesional</p>
+                                    </div>
+                                </a>
+                                <a class="flex items-center gap-4 p-4 light-card rounded-xl hover:border-[#1D8FFF] transition-all group hover-lift" href="mailto:shela5977@gmail.com" target="_blank" rel="noopener">
+                                    <div class="size-12 rounded-xl bg-[#1D8FFF]/10 flex items-center justify-center text-[#1D8FFF] group-hover:bg-[#1D8FFF] group-hover:text-white transition-all">
+                                        <span class="material-symbols-outlined">mail</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-sm text-slate-900">Email</p>
+                                        <p class="text-xs text-slate-500 font-medium">shela5977@gmail.com</p>
+                                    </div>
+                                </a>
+                                <a class="flex items-center gap-4 p-4 light-card rounded-xl hover:border-[#25D366] transition-all group hover-lift" href="https://wa.me/6282132327974?text=Halo%20Ingka,%20saya%20melihat%20portofolio%20Anda%20dan%20ingin%20terhubung!" target="_blank" rel="noopener">
+                                    <div class="size-12 rounded-xl bg-[#25D366]/10 flex items-center justify-center text-[#25D366] group-hover:bg-[#25D366] group-hover:text-white transition-all">
+                                        <span class="material-symbols-outlined">chat</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-sm text-slate-900">WhatsApp</p>
+                                        <p class="text-xs text-slate-500 font-medium">Chat langsung</p>
+                                    </div>
+                                </a>
+                                <a class="flex items-center gap-4 p-4 light-card rounded-xl hover:border-[#0EA5E9] transition-all group hover-lift" href="assets/CV_Ingka_Jivanda_Gayshela.pdf" target="_blank" rel="noopener">
+                                    <div class="size-12 rounded-xl bg-[#0EA5E9]/10 flex items-center justify-center text-[#0EA5E9] group-hover:bg-[#0EA5E9] group-hover:text-white transition-all">
+                                        <span class="material-symbols-outlined">description</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-sm text-slate-900">CV</p>
+                                        <p class="text-xs text-slate-500 font-medium">Lihat / unduh CV</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="p-8 rounded-2xl bg-primary/5 border border-primary/10 relative overflow-hidden group hover-lift">
+                            <div class="absolute -right-4 -bottom-4 size-24 bg-primary/5 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
+                            <h4 class="font-bold text-slate-900 mb-3 flex items-center gap-2"><span class="material-symbols-outlined text-primary">auto_awesome</span>Terbuka untuk Kesempatan</h4>
+                            <p class="text-sm text-slate-600 leading-relaxed font-medium">Terbuka untuk kolaborasi project dan kesempatan magang di bidang frontend. Mari berdiskusi!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-[#050B1A] py-12 px-6 border-t border-sky-400/20" data-scroll-section>
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-2">
+                    <div class="size-8 bg-primary/10 rounded-lg flex items-center justify-center text-primary"><span class="material-symbols-outlined text-lg">code</span></div><span class="font-bold text-slate-900 tracking-tight">Ingka Jivanda Gayshela</span>
+                </div>
+                <div class="flex gap-8 text-sm font-medium text-slate-500"><a class="hover:text-primary transition-colors hover:scale-105" href="#about" data-scroll-to>Tentang</a><a class="hover:text-primary transition-colors hover:scale-105" href="#projects" data-scroll-to>Project</a><a class="hover:text-primary transition-colors hover:scale-105" href="#contact" data-scroll-to>Kontak</a></div>
+                <p class="text-sm text-slate-400">© 2026 Ingka Jivanda Gayshela.</p>
+            </div>
+        </footer>
+
+        <!-- Back to Top Button -->
+        <button id="back-to-top" class="fixed bottom-8 right-8 p-3 bg-primary text-white rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all opacity-0 translate-y-10 z-50" style="transition: all 0.3s ease">
+            <span class="material-symbols-outlined">arrow_upward</span>
+        </button>
+    </main>
+
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="script_.js"></script>
+</body>
+
+</html>
