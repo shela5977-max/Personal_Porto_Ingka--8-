@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Download CV function
     function downloadCV() {
-        const cvUrl = "assets/CV_Ingka_Jivanda_Gayshela.pdf";
+        const cvUrl = "assets/CV_Ingka_Jivanda_Gayshela-terbaru.pdf";
         const link = document.createElement('a');
         link.href = cvUrl;
         link.download = "CV_Ingka_Jivanda_Gayshela.pdf";
